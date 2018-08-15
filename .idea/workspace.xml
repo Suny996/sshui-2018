@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d785a588-fa98-426a-b2fe-1bede215b68b" name="Default" comment="init" />
+    <list default="true" id="d785a588-fa98-426a-b2fe-1bede215b68b" name="Default" comment="init">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -175,7 +177,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/sshui-toolkit/package.json" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -193,6 +195,11 @@
             <path>
               <item name="iviewUi" type="b2602c69:ProjectViewProjectNode" />
               <item name="iviewUi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iviewUi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iviewUi" type="462c0819:PsiDirectoryNode" />
+              <item name="sshui-core" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -296,7 +303,7 @@
       <workItem from="1534122441491" duration="2340000" />
       <workItem from="1534125936414" duration="9163000" />
       <workItem from="1534210500120" duration="4839000" />
-      <workItem from="1534295067459" duration="828000" />
+      <workItem from="1534295067459" duration="1429000" />
     </task>
     <task id="LOCAL-00002" summary="init">
       <created>1534217310221</created>
@@ -309,7 +316,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121059000" />
+    <option name="totallyTimeSpent" value="121660000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
