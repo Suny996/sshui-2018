@@ -49,7 +49,7 @@
         type: String
       },
       showMessage: {
-        type: Boolean
+        type: Boolean, default: true
       },
       className: {
         type: String

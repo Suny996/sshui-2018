@@ -38,7 +38,7 @@
                         </label>
                         <div v-if="column.type === 'action'">
                           <iButtonGroup>
-                            <iButton :type="action.type" :icon="action.icon" :shape="action.shape" size="small" @click="RowClick(item,$event,index,action.text)" v-for='action in (column.actions)' :key="action.text">{{action.text}}</iButton>
+                            <iButton :type="action.type" :icon="action.icon" :shape="action.shape" size="small" @click="RowClick(item,$event,index,action.name,action.text)" v-for='action in (column.actions)' :key="action.name">{{action.text}}</iButton>
                           </iButtonGroup>
                         </div>
                         <label @click="toggle(index,item)" v-if="!column.type">
@@ -171,9 +171,9 @@ export default {
             this.$emit('on-sort-change', this.cloneColumns[index]['key'], this.cloneColumns[index]['_sortType'])
         },
         // 点击某一行事件
-        RowClick(data, event, index, text) {
+        RowClick(data, event, index,name, text) {
             let result = this.makeData(data)
-            this.$emit('on-row-click', result, event, index, text)
+            this.$emit('on-row-click', result, event, index,name, text)
         },
         // 点击事件 返回数据处理
         makeData(data) {

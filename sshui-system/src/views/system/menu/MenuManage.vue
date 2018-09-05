@@ -4,16 +4,17 @@
     <iLayout>
       <!--<iSider breakpoint="md" collapsible :collapsed-width="78" v-model="isCollapsed" hide-trigger
               :style="{background: '#fff'}">-->
-        <MenuQuery @on-query="d=>retData=d"></MenuQuery>
-        <MenuList :data="[retData]" @on-change="d=>currentRow=d"></MenuList>
+      <MenuQuery @on-query="d=>retData=d"></MenuQuery>
+      <MenuList :data="[retData]" @on-add="toAdd"></MenuList>
       <!--</iSider>-->
-     <!-- <iContent :style="{padding: '24px', minHeight: '280px', background: '#fff'}">
-        菜单编辑
+      <!-- <iContent :style="{padding: '24px', minHeight: '280px', background: '#fff'}">
+         菜单编辑
 
-      </iContent>-->
+       </iContent>-->
     </iLayout>
-    <iModal v-model="editDialog" width="90%" title="代码生成" :draggable=true :fullscreen=true :footer-hide=true>
-      <MenuEdit :data="currentRow"></MenuEdit>
+    <iModal v-model="editDialog" width="90%" title="代码生成" draggable fullscreen @on-ok="save"
+            :loading="loading">
+      <MenuEdit :data="currentRow" ref="edit"></MenuEdit>
     </iModal>
   </div>
 </template>
@@ -30,27 +31,30 @@
         retData: {},
         currentRow: {},
         editDialog: false,
-        isCollapsed:false
+        isCollapsed: false,
+        loading: true
       }
     },
     components: {MenuQuery, MenuList, MenuEdit},
     methods: {
-     /* buildTree(menu) {
-        let m = this.addTitle(menu);
-        console.log(m)
-        this.retData = m;
+      toAdd(d) {
+        this.currentRow = d;
+        this.editDialog = true;
       },
-      addTitle(m) {
-        m.title = m.menuName;
-        m.expand=true;
-        console.log(JSON.stringify(m));
-        if (m.children) {
-          for (var i = 0; i < m.children.length; i++) {
-             this.addTitle(m.children[i]);
+      save() {
+        this.$refs.edit.$refs['menuValidate'].validate((valid) => {
+          if (valid) {
+            return true;
+          } else {
+            this.loading = false;
+            this.$nextTick(() => {
+              this.loading = true;
+            });
+            return false;
           }
-        }
-        return m;
-      }*/
+        })
+
+      }
     }
   }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div width="100%">
-    <TreeGrid :items="data" :columns="columns"></TreeGrid>
+    <TreeGrid :items="data" :columns="columns" @on-row-click='rowClick'></TreeGrid>
   </div>
 </template>
 
@@ -31,11 +31,13 @@
             //type: 'primary',
             icon:'ios-add-circle',
             shape:'circle',
+            name:'add',
             text: '添加'
           }, {
-            type: 'warning',
+            type: 'dashed',
             icon:'ios-remove-circle',
             shape:'circle',
+            name:'del',
             text: '删除'
           }],
           width: '50',
@@ -55,9 +57,18 @@
       changePageSize: function (pageSize) {
         this.$PageUtil.change(this, {pageSize: pageSize});
       },
-      generate:function(row){
-        //alert(JSON.stringify(row))
-        this.$emit("on-generate",row);
+      rowClick:function(data, event, index,name, text) {
+        console.log('当前行数据:' + data)
+        console.log('点击行号:' + index)
+        console.log('点击事件:' + event)
+        console.log('点击内容:' +name+ text)
+        if(name==='add'){
+          this.toAdd(data);
+        }
+      },
+      toAdd:function(row){
+        //alert(row.menuName)
+        this.$emit("on-add", row);
       }
     }
   }

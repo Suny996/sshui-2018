@@ -12,7 +12,7 @@ export default new Router({
     path: '/',
     name: 'main',
     component: main,
-    redirect: "/test",
+    redirect: "/menuManage",
     children: [{
       path: '/menuManage',
       name: 'MenuManage',
