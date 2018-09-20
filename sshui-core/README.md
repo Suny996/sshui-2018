@@ -1,6 +1,6 @@
 # sshui-core
 
-> sshs
+> sshui
 
 ## Build Setup
 
@@ -19,3 +19,26 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+
+#创建项目
+# 在要创建项目的目录下执行
+vue init webpack sshui-core
+#--安装依赖
+cd sshui-core
+
+cnpm install
+#-- 安装插件
+cnpm install --save-dev iview
+
+cnpm install --save-dev axios
+
+cnpm install --save-dev vue-i18n
+
+cnpm install --save-dev babel-polyfill
+
+cnpm install --save-dev  iview-loader
+
+#模块化
+npm link

@@ -63,12 +63,11 @@
         console.log('点击事件:' + event)
         console.log('点击内容:' +name+ text)
         if(name==='add'){
-          this.toAdd(data);
+          this.$emit("on-add", data);
         }
-      },
-      toAdd:function(row){
-        //alert(row.menuName)
-        this.$emit("on-add", row);
+        if(name==='del'){
+          this.$emit("on-del", data);
+        }
       }
     }
   }

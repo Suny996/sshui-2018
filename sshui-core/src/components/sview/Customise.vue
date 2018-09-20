@@ -6,8 +6,8 @@
         <iTabPane :label="customise.customiseName" :name="customise.customiseId" closable></iTabPane>
       </template>
       <div slot="extra">
-        <iButton type="text" @click="hiddenDispCond" :icon="dispIcon"></iButton>
-        <iButton type="ghost" @click="addModal = true" icon="plus"></iButton>
+        <iButton type="default" @click="hiddenDispCond" :icon="dispIcon"></iButton>
+        <iButton type="default" @click="addModal = true" icon="ios-add"></iButton>
       </div>
     </iTabs>
     <div v-show="conditionShow">
@@ -37,7 +37,7 @@
         addModal: false,
         loading: true,
         conditionShow: true,
-        dispIcon: 'chevron-up',
+        dispIcon: 'ios-arrow-up',
         customises: [],
         data: [],
         targetKeys: [],
@@ -180,9 +180,9 @@
       hiddenDispCond() {
         this.conditionShow = !this.conditionShow;
         if (this.conditionShow) {
-          this.dispIcon = 'chevron-up';
+          this.dispIcon = 'ios-arrow-up';
         } else {
-          this.dispIcon = 'chevron-down';
+          this.dispIcon = 'ios-arrow-down';
         }
       }
     }

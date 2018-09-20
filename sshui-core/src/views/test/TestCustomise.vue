@@ -1,56 +1,70 @@
 <template>
-  <sCustomise @on-change="c=>customise=c" :defaultFields="defaultFields">
-    <iForm :model="formItem" ref="formValidate" :rules="ruleValidate" :label-width="120" label-position="right">
-      <iRow>
-        <sFormItem label="Name" prop="name" v-show="customise.name">
-          <iInput v-model="formItem.name" placeholder="Enter name...">
-         <sOperator v-model="formItem.name_opt" slot="prepend"></sOperator>
-          </iInput>
-      </sFormItem>
+  <div>
 
-       <sFormItem label="Gender" prop="gender" v-show="customise.gender">
-         <iRadioGroup v-model="formItem.gender">
-           <iRadio label="male">Male</iRadio>
-           <iRadio label="female">Female</iRadio>
-         </iRadioGroup>
-       </sFormItem>
+    <sCustomise @on-change="c=>customise=c" :defaultFields="defaultFields">
+      <iForm :model="formItem" ref="formValidate" :rules="ruleValidate" :label-width="120" label-position="right">
+        <iRow>
+          <sFormItem label="Name" prop="name" v-show="customise.name">
+            <iInput v-model="formItem.name" placeholder="Enter name...">
+              <sOperator v-model="formItem.name_opt" slot="prepend"></sOperator>
+            </iInput>
+          </sFormItem>
 
-       <sFormItem label="Date" prop="date" v-show="customise.date">
-         <iDatePicker type="date" v-model="formItem.date"></iDatePicker>
-       </sFormItem>
+          <sFormItem label="Gender" prop="gender" v-show="customise.gender">
+            <iRadioGroup v-model="formItem.gender">
+              <iRadio label="male">Male</iRadio>
+              <iRadio label="female">Female</iRadio>
+            </iRadioGroup>
+          </sFormItem>
 
-       <sFormItem label="City" label-for="city" prop="city" v-show="customise.city">
-         <sCascader v-model="formItem.city" dict="PROV" clearable filterable element-id="city">
-         </sCascader>
-       </sFormItem>
+          <sFormItem label="Date" prop="date" v-show="customise.date">
+            <iDatePicker type="date" v-model="formItem.date"></iDatePicker>
+          </sFormItem>
 
-       <sFormItem label="E-mail" prop="mail" v-show="customise.mail">
-         <iInput v-model="formItem.mail" placeholder="Enter your e-mail"></iInput>
-       </sFormItem>
+          <sFormItem label="City" label-for="city" prop="city" v-show="customise.city">
+            <sCascader v-model="formItem.city" dict="PROV" clearable filterable element-id="city">
+            </sCascader>
+          </sFormItem>
 
-       <sFormItem :label="$t('switchLangTitle')">
-         <iRadioGroup :value="lang" @on-change="handleSwitch" vertical>
-           <iRadio label="zh-CN">
-             <span>中文简体</span>
-           </iRadio>
-           <iRadio label="zh-TW">
-             <span>中文繁體</span>
-           </iRadio>
-           <iRadio label="en-US">
-             <span>English</span>
-           </iRadio>
-         </iRadioGroup>
-       </sFormItem>
+          <sFormItem label="E-mail" prop="mail" v-show="customise.mail">
+            <iInput v-model="formItem.mail" placeholder="Enter your e-mail"></iInput>
+          </sFormItem>
+
+          <sFormItem :label="$t('switchLangTitle')">
+            <iRadioGroup :value="lang" @on-change="handleSwitch" vertical>
+              <iRadio label="zh-CN">
+                <span>中文简体</span>
+              </iRadio>
+              <iRadio label="zh-TW">
+                <span>中文繁體</span>
+              </iRadio>
+              <iRadio label="en-US">
+                <span>English</span>
+              </iRadio>
+            </iRadioGroup>
+          </sFormItem>
 
 
-       <sFormItem>
-         <iButton type="primary" @click="handleSubmit('formValidate')">Submit</iButton>
-         <iButton type="warning" ghost @click="handleReset('formValidate')" style="margin-left: 8px">Reset</iButton>
-       </sFormItem>
+          <sFormItem>
+            <iButton type="primary" @click="handleSubmit('formValidate')">Submit</iButton>
+            <iButton type="warning" ghost @click="handleReset('formValidate')" style="margin-left: 8px">Reset</iButton>
+            <iButton type="info" @click="dialogVisible = true">点击打开 Dialog</iButton>
+          </sFormItem>
 
-     </iRow>
-   </iForm>
-  </sCustomise>
+        </iRow>
+      </iForm>
+    </sCustomise>
+    <eDialog
+      title="提示"
+      :visible.sync="dialogVisible"
+      width="30%">
+      <span>这是一段信息</span>
+      <span slot="footer" class="dialog-footer">
+    <iButton @click="dialogVisible = false">取 消</iButton>
+    <iButton type="primary" @click="dialogVisible = false">确 定</iButton>
+  </span>
+    </eDialog>
+  </div>
 </template>
 
 <script>
@@ -62,6 +76,7 @@
         defaultFields: {name: true, city: true, date: false, mail: false, gender: false},
         customise: {},
         select3: '',
+        dialogVisible: false,
         formItem: {
           name: '',
           name_opt: 'like',
@@ -108,7 +123,16 @@
         })
       },
       handleReset(name) {//重置查询条件默认方法
-        this.$refs[name].resetFields();
+
+        this.$messageBox.confirm('确定要重置查询条件吗?', '确认', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(() => {
+          this.$refs[name].resetFields();
+        }).catch(() => {
+        });
+
       },
       handleSwitch(lang) {
         this.$i18n.locale = lang;

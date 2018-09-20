@@ -12,7 +12,7 @@ import Axios from "axios"
 import VueI18n from 'vue-i18n'
 import messages from './locale'
 import sView from 'sshui-core/src/components/sview'
-
+//import Modal from 'iview'
 import PageUtil from '@/libs/PageUtil'
 
 Vue.config.productionTip = false
@@ -47,6 +47,7 @@ Vue.use(iView, {
     return ''
   }
 })
+//Vue.prototype.$Modal = Modal
 
 //Vue.use(iView)
 

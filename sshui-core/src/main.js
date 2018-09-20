@@ -4,7 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import iView from './components/iview'
+import eView from './components/eview'
+import { Message,MessageBox} from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 //import iView from 'iview'
+//import { Modal } from 'iview';
 import 'babel-polyfill'
 //import store from './store'
 import 'iview/dist/styles/iview.css'
@@ -38,10 +42,24 @@ Vue.use(iView, {
   transfer: true,
   size: 'large'
 })
+Vue.use(eView, {
+  i18n: function (path, options) {
+    let value = i18n.t(path, options)
+    if (value !== null && value !== undefined) {
+      return value
+    }
+    return ''
+  },
+  transfer: true,
+  size: 'large'
+})
 Vue.use(sView)
 
 Vue.locale = () => {
 };
+
+Vue.prototype.$message = Message
+Vue.prototype.$messageBox = MessageBox
 
 Vue.prototype.$axios = Axios
 Vue.config.productionTip = false

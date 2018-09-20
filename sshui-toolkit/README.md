@@ -1,6 +1,6 @@
-# sshui-toolkit
+# sshui
 
-> sshs
+> sshui
 
 ## Build Setup
 
@@ -39,3 +39,7 @@ cnpm install --save-dev babel-polyfill
 cnpm install --save-dev  iview-loader
 
 cnpm install --save-dev E:\Workspace2018\sshui\iviewUi\sshui-core
+
+
+#模块化
+npm link sshui-core

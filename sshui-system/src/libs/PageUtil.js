@@ -80,5 +80,39 @@ export default {
       .catch(error => {
         console.log(error);
       })
+  },
+  post: function (url, data,callbaks) {
+    console.log(data);
+    //console.log(this)
+    Axios.post(url, data)
+      .then(res => {
+        console.log(res.data);
+        if(callbaks && callbaks.success){
+          callbaks.success(res.data);
+        }
+      })
+      .catch(error => {
+        console.log(error);
+        if(callbaks && callbaks.error){
+          callbaks.error(error);
+        }
+      });
+  },
+  delete: function (url, data,callbaks) {
+    console.log(data);
+    //console.log(this)
+    Axios.delete(url, data)
+      .then(res => {
+        console.log(res.data);
+        if(callbaks && callbaks.success){
+          callbaks.success(res.data);
+        }
+      })
+      .catch(error => {
+        console.log(error);
+        if(callbaks && callbaks.error){
+          callbaks.error(error);
+        }
+      });
   }
 }

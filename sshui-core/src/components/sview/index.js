@@ -1,8 +1,9 @@
-import Customise from './Customise.vue'
-import Select from './Select.vue'
-import Operator from './Operator.vue'
-import Cascader from './Cascader.vue'
-import FormItem from './FormItem.vue'
+import Customise from './Customise'
+import Select from './Select'
+import Operator from './Operator'
+import Cascader from './Cascader'
+import FormItem from './FormItem'
+import TreeGrid from './TreeGrid'
 
 // 这里是重点
 const sview = {
@@ -12,6 +13,7 @@ const sview = {
     Vue.component('sOperator',Operator)
     Vue.component('sCascader',Cascader)
     Vue.component('sFormItem',FormItem)
+    Vue.component('sTreeGrid',TreeGrid)
   }
 }
 
