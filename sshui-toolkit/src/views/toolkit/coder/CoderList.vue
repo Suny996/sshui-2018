@@ -76,10 +76,10 @@
     },
     methods: {
       changePage: function (currPage) {
-        this.$PageUtil.change(this, {currPage: currPage});
+        this.$PageUtil.pageChange(this, {currPage: currPage});
       },
       changePageSize: function (pageSize) {
-        this.$PageUtil.change(this, {pageSize: pageSize});
+        this.$PageUtil.pageChange(this, {pageSize: pageSize});
       },
       generate:function(row){
         //alert(JSON.stringify(row))

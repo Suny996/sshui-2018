@@ -2,29 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d785a588-fa98-426a-b2fe-1bede215b68b" name="Default" comment="init">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshui-core/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-core/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshui-core/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-core/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sshui-core/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-core/config/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sshui-core/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-core/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshui-core/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-core/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshui-core/src/components/sview/Customise.vue" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-core/src/components/sview/Customise.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sshui-core/src/components/sview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-core/src/components/sview/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshui-core/src/locale/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-core/src/locale/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sshui-core/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-core/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sshui-core/src/views/test/TestCustomise.vue" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-core/src/views/test/TestCustomise.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshui-system/src/libs/PageUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-system/src/libs/PageUtil.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshui-system/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-system/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshui-system/src/views/system/menu/MenuEdit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-system/src/views/system/menu/MenuEdit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshui-system/src/views/system/menu/MenuList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-system/src/views/system/menu/MenuList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshui-system/src/views/system/menu/MenuManage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-system/src/views/system/menu/MenuManage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshui-toolkit/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-toolkit/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshui-toolkit/build/webpack.base.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-toolkit/build/webpack.base.conf.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sshui-toolkit/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-toolkit/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshui-toolkit/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-toolkit/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshui-toolkit/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-toolkit/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sshui-toolkit/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-toolkit/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sshui-toolkit/src/themes/index.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sshui-toolkit/src/libs/PageUtil.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sshui-toolkit/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-toolkit/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderManage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderManage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderQuery.vue" beforeDir="false" afterPath="$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderQuery.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,7 +30,7 @@
     <session id="-2084876252">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
+          <entry key="project.closed" value="24" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
@@ -59,53 +50,54 @@
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.54" value="1" />
-          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.70" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="30" />
+          <entry key="project.opened" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="babelrc" value="1" />
-          <entry key="js" value="798" />
-          <entry key="json" value="43" />
+          <entry key="js" value="947" />
+          <entry key="json" value="54" />
           <entry key="md" value="65" />
           <entry key="txt" value="4" />
-          <entry key="vue" value="3306" />
+          <entry key="vue" value="3369" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="44" />
-          <entry key="JavaScript" value="798" />
+          <entry key="JSON" value="55" />
+          <entry key="JavaScript" value="947" />
           <entry key="Markdown" value="54" />
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="Vue.js" value="3306" />
+          <entry key="Vue.js" value="3369" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="babelrc" value="2" />
           <entry key="gitkeep" value="1" />
-          <entry key="js" value="85" />
-          <entry key="json" value="17" />
+          <entry key="js" value="96" />
+          <entry key="json" value="19" />
           <entry key="md" value="14" />
           <entry key="rnc" value="1" />
-          <entry key="vue" value="91" />
+          <entry key="vue" value="99" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="19" />
-          <entry key="JavaScript" value="85" />
+          <entry key="JSON" value="21" />
+          <entry key="JavaScript" value="96" />
           <entry key="Markdown" value="7" />
           <entry key="PLAIN_TEXT" value="8" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Vue.js" value="91" />
+          <entry key="Vue.js" value="99" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -113,71 +105,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderGenerate.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="67">
+              <caret line="242" column="47" selection-start-line="242" selection-start-column="47" selection-end-line="242" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderManage.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="28" column="19" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderQuery.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1083">
+              <caret line="78" column="30" lean-forward="true" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sshui-toolkit/README.md">
+        <entry file="file://$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderList.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="43" column="4" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sshui-core/config/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-228" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sshui-core/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sshui-core/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="196">
-                <caret line="42" selection-start-line="42" selection-end-line="43" selection-end-column="8" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sshui-toolkit/src/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="e#140#161#0" expanded="true" />
-                <element signature="e#244#295#0" expanded="true" />
-                <element signature="e#350#386#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sshui-toolkit.bak/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sshui-core/src/components/sview/Customise.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+            <state relative-caret-position="328">
+              <caret line="81" column="28" selection-start-line="81" selection-start-column="28" selection-end-line="81" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -214,6 +173,9 @@
       <find>generate</find>
       <find>name</find>
       <find>coder</find>
+      <find>dialogVisible</find>
+      <find>ajv-keywords</find>
+      <find>Axios</find>
     </findStrings>
     <replaceStrings>
       <replace>variables</replace>
@@ -240,19 +202,14 @@
         <option value="$PROJECT_DIR$/sshui-toolkit/src/libs/PageUtil.js" />
         <option value="$PROJECT_DIR$/sshui-toolkit/build/webpack.base.conf.js" />
         <option value="$PROJECT_DIR$/sshui-core/src/components/sview/Operator.vue" />
-        <option value="$PROJECT_DIR$/sshui-core/src/components/sview/Select.vue" />
-        <option value="$PROJECT_DIR$/sshui-toolkit/src/main.js" />
         <option value="$PROJECT_DIR$/sshui-toolkit/src/locale/lang/zh-CN.js" />
         <option value="$PROJECT_DIR$/sshui-toolkit/src/locale/lang/en-US.js" />
         <option value="$PROJECT_DIR$/sshui-toolkit/src/locale/lang/zh-TW.js" />
         <option value="$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/main.vue" />
-        <option value="$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderQuery.vue" />
-        <option value="$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderList.vue" />
         <option value="$PROJECT_DIR$/sshui-core/.babelrc" />
         <option value="$PROJECT_DIR$/sshui-core/src/components/HelloWorld.vue" />
         <option value="$PROJECT_DIR$/sshui-toolkit/package.json" />
         <option value="$PROJECT_DIR$/sshui-toolkit/src/App.vue" />
-        <option value="$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderManage.vue" />
         <option value="$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderGenerate.vue" />
         <option value="$PROJECT_DIR$/sshui-core/src/components/sview/Cascader.vue" />
         <option value="$PROJECT_DIR$/sshui-system/README.md" />
@@ -271,15 +228,22 @@
         <option value="$PROJECT_DIR$/sshui-system/src/views/system/menu/MenuManage.vue" />
         <option value="$PROJECT_DIR$/sshui-core/src/components/iview/index.js" />
         <option value="$PROJECT_DIR$/sshui-core/src/components/eview/index.js" />
-        <option value="$PROJECT_DIR$/sshui-core/src/views/test/TestCustomise.vue" />
         <option value="$PROJECT_DIR$/sshui-core/src/App.vue" />
         <option value="$PROJECT_DIR$/sshui-core/src/components/sview/index.js" />
-        <option value="$PROJECT_DIR$/sshui-core/src/components/sview/Customise.vue" />
-        <option value="$PROJECT_DIR$/sshui-core/src/main.js" />
         <option value="$PROJECT_DIR$/sshui-core/src/locale/index.js" />
-        <option value="$PROJECT_DIR$/sshui-core/package.json" />
         <option value="$PROJECT_DIR$/sshui-core/README.md" />
         <option value="$PROJECT_DIR$/sshui-toolkit/README.md" />
+        <option value="$PROJECT_DIR$/sshui-core/src/main.js" />
+        <option value="$PROJECT_DIR$/sshui-core/src/views/test/TestCustomise.vue" />
+        <option value="$PROJECT_DIR$/sshui-core/config/index.js" />
+        <option value="$PROJECT_DIR$/sshui-core/package.json" />
+        <option value="$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderManage.vue" />
+        <option value="$PROJECT_DIR$/sshui-core/src/components/sview/Select.vue" />
+        <option value="$PROJECT_DIR$/sshui-core/src/components/sview/Customise.vue" />
+        <option value="$PROJECT_DIR$/sshui-toolkit/src/main.js" />
+        <option value="$PROJECT_DIR$/sshui-core/src/libs/AxiosUtil.js" />
+        <option value="$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderQuery.vue" />
+        <option value="$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderList.vue" />
       </list>
     </option>
   </component>
@@ -299,7 +263,6 @@
     <handled-path value="$PROJECT_DIR$/sshui-core/node_modules" />
     <handled-path value="$PROJECT_DIR$/sshui-portal/node_modules" />
     <handled-path value="$PROJECT_DIR$/sshui-system/node_modules" />
-    <handled-path value="$PROJECT_DIR$/sshui-toolkit.bak/node_modules" />
     <handled-path value="$PROJECT_DIR$/sshui-toolkit/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
@@ -307,12 +270,11 @@
       <path value="$PROJECT_DIR$/sshui-core/package.json" />
       <path value="$PROJECT_DIR$/sshui-portal/package.json" />
       <path value="$PROJECT_DIR$/sshui-system/package.json" />
-      <path value="$PROJECT_DIR$/sshui-toolkit.bak/package.json" />
       <path value="$PROJECT_DIR$/sshui-toolkit/package.json" />
     </packageJsonPaths>
   </component>
   <component name="PackageJsonUpdateNotifier">
-    <dismissed value="$PROJECT_DIR$/sshui-toolkit.bak/package.json" />
+    <dismissed value="$PROJECT_DIR$/sshui-core/package.json" />
     <dismissed value="$PROJECT_DIR$/sshui-toolkit/package.json" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -338,11 +300,6 @@
             <path>
               <item name="iviewUi" type="b2602c69:ProjectViewProjectNode" />
               <item name="iviewUi" type="462c0819:PsiDirectoryNode" />
-              <item name="sshui-core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iviewUi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iviewUi" type="462c0819:PsiDirectoryNode" />
               <item name="sshui-toolkit" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -350,6 +307,30 @@
               <item name="iviewUi" type="462c0819:PsiDirectoryNode" />
               <item name="sshui-toolkit" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iviewUi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iviewUi" type="462c0819:PsiDirectoryNode" />
+              <item name="sshui-toolkit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iviewUi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iviewUi" type="462c0819:PsiDirectoryNode" />
+              <item name="sshui-toolkit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="toolkit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iviewUi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iviewUi" type="462c0819:PsiDirectoryNode" />
+              <item name="sshui-toolkit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="toolkit" type="462c0819:PsiDirectoryNode" />
+              <item name="coder" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -367,7 +348,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -484,7 +465,9 @@
       <workItem from="1537429945058" duration="464000" />
       <workItem from="1537446130280" duration="1161000" />
       <workItem from="1537447333115" duration="2160000" />
-      <workItem from="1537449824677" duration="1064000" />
+      <workItem from="1537449824677" duration="1317000" />
+      <workItem from="1537489727736" duration="6119000" />
+      <workItem from="1537500154753" duration="935000" />
     </task>
     <task id="LOCAL-00002" summary="init">
       <created>1534217310221</created>
@@ -521,11 +504,18 @@
       <option name="project" value="LOCAL" />
       <updated>1536118259304</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="init">
+      <created>1537451081778</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1537451081778</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180884000" />
+    <option name="totallyTimeSpent" value="188191000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -541,15 +531,15 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17630465" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17559944" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49925596" weight="0.32733223" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.2348378" side_tool="true" visible="true" weight="0.49056605" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.23554301" side_tool="true" weight="0.49056605" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.2157738" weight="0.32569557" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" sideWeight="0.49925596" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.7651622" visible="true" weight="0.49056605" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.764457" weight="0.53908354" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.2618658" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -558,6 +548,25 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24962178" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.17559944" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49925596" weight="0.32733223" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.23554301" side_tool="true" weight="0.49056605" />
+      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.2157738" weight="0.32569557" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" sideWeight="0.49925596" weight="0.3295082" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.764457" visible="true" weight="0.53908354" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.2618658" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="10" weight="0.3289689" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24962178" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -586,18 +595,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sshui-core/src/components/sview/Cascader.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sshui-system/src/locale/locale.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-193" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sshui-system/src/locale/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -631,13 +628,6 @@
     <entry file="file://$PROJECT_DIR$/sshui-system/src/components/treegrid/TreeGrid.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1140" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderList.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sshui-system/src/components/treegrid/treeGrid2.0.vue">
@@ -677,20 +667,6 @@
     <entry file="file://$PROJECT_DIR$/sshui-system/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-171" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderQuery.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="36" column="60" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sshui-toolkit/src/libs/PageUtil.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sshui-system/src/views/system/menu/MenuQuery.vue">
@@ -770,25 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderGenerate.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="242" column="47" selection-start-line="242" selection-start-column="47" selection-end-line="242" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sshui-core/src/libs/PageUtil.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1881" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderManage.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-455">
-          <caret line="3" column="81" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sshui-core/build/build.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-474" />
@@ -814,28 +771,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sshui-core/src/views/test/TestCustomise.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="56" column="12" lean-forward="true" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sshui-core/src/components/sview/FormItem.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sshui-core/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-          <folding>
-            <element signature="e#140#161#0" expanded="true" />
-            <element signature="e#506#542#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -846,64 +785,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sshui-toolkit.bak/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="41" lean-forward="true" selection-start-line="21" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sshui-core/src/components/sview/Customise.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sshui-core/config/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-228" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sshui-toolkit.bak/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sshui-toolkit.bak/README.md" />
+    <entry file="file://$PROJECT_DIR$/sshui-toolkit.bak/package.json" />
     <entry file="file://$PROJECT_DIR$/sshui-toolkit/node_modules/_sshui-core@1.0.0@sshui-core/src/components/iview/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#756#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sshui-toolkit/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#140#161#0" expanded="true" />
-            <element signature="e#244#295#0" expanded="true" />
-            <element signature="e#350#386#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sshui-core/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/sshui-core/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="196">
+          <first_editor relative-caret-position="798">
             <caret line="42" selection-start-line="42" selection-end-line="43" selection-end-column="8" />
           </first_editor>
           <second_editor />
@@ -915,10 +805,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sshui-toolkit/README.md">
+    <entry file="file://$PROJECT_DIR$/sshui-core/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="43" column="4" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+        <state relative-caret-position="-608">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="e#140#161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sshui-toolkit/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-57" />
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-145">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sshui-core/src/views/test/TestCustomise.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sshui-toolkit/config/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="6" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sshui-toolkit/src/libs/PageUtil.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="57" column="30" lean-forward="true" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sshui-core/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="73" column="26" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sshui-core/config/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sshui-core/src/libs/AxiosUtil.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sshui-core/src/components/sview/Customise.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="58" column="17" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sshui-core/src/components/sview/Select.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="55" column="19" lean-forward="true" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sshui-toolkit/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#140#161#0" expanded="true" />
+            <element signature="e#244#295#0" expanded="true" />
+            <element signature="e#350#386#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderGenerate.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="242" column="47" selection-start-line="242" selection-start-column="47" selection-end-line="242" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderManage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderQuery.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="78" column="30" lean-forward="true" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sshui-toolkit/src/views/toolkit/coder/CoderList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="81" column="28" selection-start-line="81" selection-start-column="28" selection-end-line="81" selection-end-column="28" />
         </state>
       </provider>
     </entry>

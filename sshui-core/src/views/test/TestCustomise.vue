@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <sCustomise @on-change="c=>customise=c" :defaultFields="defaultFields">
       <iForm :model="formItem" ref="formValidate" :rules="ruleValidate" :label-width="120" label-position="right">
         <iRow>
@@ -48,20 +47,20 @@
           <sFormItem>
             <iButton type="primary" @click="handleSubmit('formValidate')">Submit</iButton>
             <iButton type="warning" ghost @click="handleReset('formValidate')" style="margin-left: 8px">Reset</iButton>
-            <iButton type="info" @click="dialogVisible = true">点击打开 Dialog</iButton>
+            <iButton type="info" @click="EDialogVisible = true">打开 EDialog</iButton>
           </sFormItem>
 
         </iRow>
       </iForm>
     </sCustomise>
     <eDialog
-      title="提示"
-      :visible.sync="dialogVisible"
+      title="element-Dialog 提示"
+      :visible.sync="EDialogVisible"
       width="30%">
       <span>这是一段信息</span>
       <span slot="footer" class="dialog-footer">
-    <iButton @click="dialogVisible = false">取 消</iButton>
-    <iButton type="primary" @click="dialogVisible = false">确 定</iButton>
+    <iButton @click="EDialogVisible = false">取 消</iButton>
+    <iButton type="primary" @click="EDialogVisible = false">确 定</iButton>
   </span>
     </eDialog>
   </div>
@@ -76,7 +75,7 @@
         defaultFields: {name: true, city: true, date: false, mail: false, gender: false},
         customise: {},
         select3: '',
-        dialogVisible: false,
+        EDialogVisible: false,
         formItem: {
           name: '',
           name_opt: 'like',
@@ -124,7 +123,7 @@
       },
       handleReset(name) {//重置查询条件默认方法
 
-        this.$messageBox.confirm('确定要重置查询条件吗?', '确认', {
+       this.$MessageBox.confirm('确定要重置查询条件吗?', '确认', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           type: 'warning'
@@ -132,7 +131,6 @@
           this.$refs[name].resetFields();
         }).catch(() => {
         });
-
       },
       handleSwitch(lang) {
         this.$i18n.locale = lang;

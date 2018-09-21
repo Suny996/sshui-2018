@@ -2,7 +2,7 @@
   <div>
     <CoderQuery @on-query="d=>retData=d"></CoderQuery>
     <CoderList :data="retData" @on-change="d=>retData=d" @on-generate="goGenerate"></CoderList>
-    <iModal v-model="generateDialog" width="90%"  title="代码生成" :draggable=true :fullscreen=true :footer-hide=true >
+    <iModal v-model="generateDialog" width="80%"  title="代码生成" :draggable=true :footer-hide=true >
       <CoderGenerate :data="currentRow"></CoderGenerate>
     </iModal>
   </div>

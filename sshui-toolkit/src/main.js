@@ -13,7 +13,7 @@ import VueI18n from 'vue-i18n'
 import messages from './locale'
 import sView from 'sshui-core/src/components/sview'
 
-import PageUtil from '@/libs/PageUtil'
+import PageUtil from 'sshui-core/src/libs/AxiosUtil'
 
 //import './themes/index.less';
 

@@ -53,13 +53,15 @@ Vue.use(eView, {
   transfer: true,
   size: 'large'
 })
+
 Vue.use(sView)
 
 Vue.locale = () => {
 };
 
-Vue.prototype.$message = Message
-Vue.prototype.$messageBox = MessageBox
+Vue.prototype.$Message = Message
+Vue.prototype.$MessageBox = MessageBox
+
 
 Vue.prototype.$axios = Axios
 Vue.config.productionTip = false

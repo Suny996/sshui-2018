@@ -80,7 +80,7 @@
     },
     methods: {
       query: function () {
-        this.$PageUtil.query(this);
+        this.$PageUtil.pageQuery(this);
         /*this.$axios.post("/toolkit/coder/tableList", {pageSize:20})
           .then(res => {
             console.log( res.data);
