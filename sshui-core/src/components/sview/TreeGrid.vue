@@ -12,9 +12,9 @@
             type: 'selection'为多选功能 type: 'action' 为操作功能 actions:[{}] 操作按钮
  -->
 <template>
-    <div :style="{width:tableWidth}" class='autoTbale'>
+    <div :style="{width:tableWidth}" class='ivu-table ivu-table-default autoTbale'>
         <table class="table table-bordered" id='hl-tree-table'>
-            <thead>
+            <thead class="ivu-table-header">
                 <tr>
                     <th v-for="(column,index) in cloneColumns">
                         <label v-if="column.type === 'selection'">
@@ -23,15 +23,15 @@
                         <label v-else>
                             {{ renderHeader(column, index) }}
                             <span class="ivu-table-sort" v-if="column.sortable">
-                                <Icon type="arrow-up-b" :class="{on: column._sortType === 'asc'}" @click.native="handleSort(index, 'asc')" />
-                                <Icon type="arrow-down-b" :class="{on: column._sortType === 'desc'}" @click.native="handleSort(index, 'desc')" />
+                                <iIcon type="arrow-up-b" :class="{on: column._sortType === 'asc'}" @click.native="handleSort(index, 'asc')" />
+                                <iIcon type="arrow-down-b" :class="{on: column._sortType === 'desc'}" @click.native="handleSort(index, 'desc')" />
                             </span>
                         </label>
                     </th>
                 </tr>
             </thead>
-            <tbody>
-                <tr v-for="(item,index) in initItems" :key="item.id" v-show="show(item)" :class="{'child-tr':item.parent}">
+            <tbody class="ivu-table-tbody">
+                <tr v-for="(item,index) in initItems" :key="item.id" v-show="show(item)" :class="{'child-tr':item.parent,'ivu-table-row ':true}">
                     <td v-for="(column,snum) in columns" :key="column.key" :style=tdStyle(column)>
                         <label v-if="column.type === 'selection'">
                             <input type="checkbox" :value="item.id" v-model="checkGroup" @click="handleCheckClick(item,$event,index)">
@@ -41,7 +41,7 @@
                             <iButton :type="action.type" :icon="action.icon" :shape="action.shape" size="small" @click="RowClick(item,$event,index,action.name,action.text)" v-for='action in (column.actions)' :key="action.name">{{action.text}}</iButton>
                           </iButtonGroup>
                         </div>
-                        <label @click="toggle(index,item)" v-if="!column.type">
+                        <label @click="toggle(index,item)" v-if="!column.type" class="ivu-table-cell">
                             <span v-if='snum==iconRow()'>
                                 <i v-html='item.spaceHtml'></i>
                                 <i v-if="item.children&&item.children.length>0" class="ivu-icon" :class="{'ivu-icon-ios-arrow-forward':!item.expanded,'ivu-icon-ios-arrow-down':item.expanded }"></i>

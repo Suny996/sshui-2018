@@ -1,11 +1,11 @@
 <template>
   <div width="100%">
-    <TreeGrid :items="data" :columns="columns" @on-row-click='rowClick'></TreeGrid>
+    <sTreeGrid :items="data" :columns="columns" @on-row-click='rowClick'></sTreeGrid>
   </div>
 </template>
 
 <script>
-  import TreeGrid from '@/components/treegrid/treeGrid2.0'
+  //import TreeGrid from '@/components/treegrid/treeGrid2.0'
 
   export default {
     name: "MenuList",
@@ -49,7 +49,7 @@
         type: Array
       }
     },
-    components:{TreeGrid},
+   // components:{TreeGrid},
     methods: {
       changePage: function (currPage) {
         this.$PageUtil.change(this, {currPage: currPage});
