@@ -42,8 +42,6 @@
               </iRadio>
             </iRadioGroup>
           </sFormItem>
-
-
           <sFormItem>
             <iButton type="primary" @click="handleSubmit('formValidate')">Submit</iButton>
             <iButton type="warning" ghost @click="handleReset('formValidate')" style="margin-left: 8px">Reset</iButton>
@@ -53,6 +51,7 @@
         </iRow>
       </iForm>
     </sCustomise>
+    <sTreeTable :data="treeData" :columns="treeColumns"></sTreeTable>
     <eDialog
       title="element-Dialog 提示"
       :visible.sync="EDialogVisible"
@@ -105,7 +104,15 @@
             [
               {required: true, type: 'date', message: 'Please select the date', trigger: 'change'}
             ]
-        }
+        },
+        treeColumns: [{
+          title: 'Name',
+          key: 'name'
+        }, {
+          title: 'Age',
+          key: 'age'
+        }],
+        treeData: [{name: 'suny', age: 34, children:[{name: 'doudou', age: 5}]}, {name: 'tom', age: 16}]
       }
     },
     methods: {
@@ -123,7 +130,7 @@
       },
       handleReset(name) {//重置查询条件默认方法
 
-       this.$MessageBox.confirm('确定要重置查询条件吗?', '确认', {
+        this.$MessageBox.confirm('确定要重置查询条件吗?', '确认', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           type: 'warning'

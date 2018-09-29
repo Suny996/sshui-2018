@@ -3,8 +3,8 @@
        <!-- <div class="demo-split">
             <iSplit v-model="split1">
                 <div slot="left" class="demo-split-pane">-->
-                    <MenuQuery @on-query="d=>retData=d"></MenuQuery>
-                    <MenuList :data="[retData]" @on-add="toAdd" @on-del="toDel"></MenuList>
+                    <OrgQuery @on-query="d=>retData=d"></OrgQuery>
+                    <OrgList :data="[retData]" @on-add="toAdd" @on-del="toDel"></OrgList>
                <!-- </div>
                 <div slot="right" class="demo-split-pane">
                     Right Pane
@@ -12,20 +12,20 @@
             </iSplit>
         </div>-->
 
-        <iModal v-model="editDialog" title="菜單管理" draggable @on-ok="save"
+        <iModal v-model="editDialog" title="机构管理" draggable @on-ok="save"
                 :loading="loading">
-            <MenuEdit :data="currentRow" ref="edit"></MenuEdit>
+            <OrgEdit :data="currentRow" ref="edit"></OrgEdit>
         </iModal>
     </div>
 </template>
 
 <script>
-    import MenuQuery from './MenuQuery'
-    import MenuList from './MenuList'
-    import MenuEdit from './MenuEdit'
+    import OrgQuery from './OrgQuery'
+    import OrgList from './OrgList'
+    import OrgEdit from './OrgEdit'
 
     export default {
-        name: "MenuManage",
+        name: "OrgManage",
         data() {
             return {
                 retData: {},
@@ -37,7 +37,7 @@
             }
         },
         props: ['option'],
-        components: {MenuQuery, MenuList, MenuEdit},
+        components: {OrgQuery, OrgList, OrgEdit},
         methods: {
             toAdd(d) {
                 this.currentRow = d;
@@ -50,7 +50,7 @@
                     alert(d.menuCode);
                   }
                 })*/
-                this.$PageUtil.delete('/system/menu/' + d.menuCode, {}, {
+                this.$PageUtil.delete('/system/org/' + d.orgCode, {}, {
                     error: function (message) {
                         this.loading = false;
                         //this.$Modal.error({});
@@ -63,11 +63,11 @@
                 });
             },
             save() {
-                this.$refs.edit.$refs['menuValidate'].validate((valid) => {
+                this.$refs.edit.$refs['orgValidate'].validate((valid) => {
                     if (valid) {
-                        console.log(JSON.stringify(this.$refs.edit.menu))
+                        console.log(JSON.stringify(this.$refs.edit.org))
 
-                        this.$PageUtil.post('/system/menu', Object.assign(this.$refs.edit.menu, {parentMenuCode: this.currentRow.menuCode}), {
+                        this.$PageUtil.post('/system/org', Object.assign(this.$refs.edit.org, {parentOrgCode: this.currentRow.orgCode}), {
                             error: function (message) {
                                 this.loading = false;
                                 //this.$Modal.error({});
@@ -95,12 +95,4 @@
 </script>
 
 <style scoped>
-    .demo-split {
-        height: 600px;
-        border: 1px solid #dcdee2;
-    }
-
-    .demo-split-pane {
-        padding: 10px;
-    }
 </style>

@@ -4,7 +4,7 @@ import Operator from './Operator'
 import Cascader from './Cascader'
 import FormItem from './FormItem'
 import TreeGrid from './TreeGrid'
-//import TreeTabe from './TreeTable/index'
+import TreeTable from './tree-table/TreeTable'
 // 这里是重点
 const sview = {
   install: function(Vue){
@@ -14,7 +14,7 @@ const sview = {
     Vue.component('sCascader',Cascader)
     Vue.component('sFormItem',FormItem)
     Vue.component('sTreeGrid',TreeGrid)
-    //Vue.component('sTreeTabe',TreeTabe)
+    Vue.component('sTreeTable',TreeTable)
   }
 }
 

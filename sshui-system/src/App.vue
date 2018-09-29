@@ -22,8 +22,9 @@ export default {
   }
   .ivu-form-item-content {
     position: relative;
-    /*line-height: 25px;*/
+    line-height: 25px;
     font-size: 12px;
     text-align: left;
+    white-space:nowrap;
   }
 </style>

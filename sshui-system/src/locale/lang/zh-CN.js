@@ -5,7 +5,7 @@ const lang = {
       menu: {
         menuCode:'菜单编码',
         menuName:'菜单名称',
-        menuType:'菜单类型:0-节点，1-功能',
+        menuType:'菜单类型',
         menuUrl:'菜单路径url',
         parentMenuCode:'所属父菜单',
         menuModule:'所属模块',
