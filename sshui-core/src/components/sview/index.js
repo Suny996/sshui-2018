@@ -5,6 +5,7 @@ import Cascader from './Cascader'
 import FormItem from './FormItem'
 import TreeGrid from './TreeGrid'
 import TreeTable from './tree-table/TreeTable'
+
 // 这里是重点
 const sview = {
   install: function(Vue){

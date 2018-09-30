@@ -23,28 +23,36 @@
                     <label v-else>
                         {{ renderHeader(column, index) }}
                         <span class="ivu-table-sort" v-if="column.sortable">
-                                <iIcon type="arrow-up-b" :class="{on: column._sortType === 'asc'}" @click.native="handleSort(index, 'asc')" />
-                                <iIcon type="arrow-down-b" :class="{on: column._sortType === 'desc'}" @click.native="handleSort(index, 'desc')" />
+                                <iIcon type="arrow-up-b" :class="{on: column._sortType === 'asc'}"
+                                       @click.native="handleSort(index, 'asc')"/>
+                                <iIcon type="arrow-down-b" :class="{on: column._sortType === 'desc'}"
+                                       @click.native="handleSort(index, 'desc')"/>
                             </span>
                     </label>
                 </th>
             </tr>
             </thead>
             <tbody class="ivu-table-tbody">
-            <tr v-for="(item,index) in initItems" :key="item.id" v-show="show(item)" :class="{'child-tr':item.parent,'ivu-table-row ':true}">
+            <tr v-for="(item,index) in initItems" :key="item.id" v-show="show(item)"
+                :class="{'child-tr':item.parent,'ivu-table-row ':true}">
                 <td v-for="(column,snum) in columns" :key="column.key" :style=tdStyle(column)>
                     <label v-if="column.type === 'selection'">
-                        <input type="checkbox" :value="item.id" v-model="checkGroup" @click="handleCheckClick(item,$event,index)">
+                        <input type="checkbox" :value="item.id" v-model="checkGroup"
+                               @click="handleCheckClick(item,$event,index)">
                     </label>
                     <div v-if="column.type === 'action'">
                         <iButtonGroup>
-                            <iButton :type="action.type" :icon="action.icon" :shape="action.shape" size="small" @click="RowClick(item,$event,index,action.name,action.text)" v-for='action in (column.actions)' :key="action.name">{{action.text}}</iButton>
+                            <iButton :type="action.type" :icon="action.icon" :shape="action.shape" size="small"
+                                     @click="RowClick(item,$event,index,action.name,action.text)"
+                                     v-for='action in (column.actions)' :key="action.name">{{action.text}}
+                            </iButton>
                         </iButtonGroup>
                     </div>
                     <label @click="toggle(index,item)" v-if="!column.type" class="ivu-table-cell">
                             <span v-if='snum==iconRow()'>
                                 <i v-html='item.spaceHtml'></i>
-                                <i v-if="item.children&&item.children.length>0" class="ivu-icon" :class="{'ivu-icon-ios-arrow-forward':!item.expanded,'ivu-icon-ios-arrow-down':item.expanded }"></i>
+                                <i v-if="item.children&&item.children.length>0" class="ivu-icon"
+                                   :class="{'ivu-icon-ios-arrow-forward':!item.expanded,'ivu-icon-ios-arrow-down':item.expanded }"></i>
                                 <i v-else class="ms-tree-space"></i>
                             </span> {{renderBody(item,column) }}
                     </label>
@@ -61,10 +69,11 @@
             columns: Array,
             data: {
                 type: Array,
-                default: function() {
+                default: function () {
                     return [];
                 }
-            }
+            },
+            expandLevel: {type: Number, default: 1}// add by Suny 2018-09-30 加入默认展开全部功能
         },
         data() {
             return {
@@ -171,9 +180,9 @@
                 this.$emit('on-sort-change', this.cloneColumns[index]['key'], this.cloneColumns[index]['_sortType'])
             },
             // 点击某一行事件
-            RowClick(data, event, index,name, text) {
+            RowClick(data, event, index, name, text) {
                 let result = this.makeData(data)
-                this.$emit('on-row-click', result, event, index,name, text)
+                this.$emit('on-row-click', result, event, index, name, text)
             },
             // 点击事件 返回数据处理
             makeData(data) {
@@ -245,8 +254,9 @@
                         "load": (item.expanded ? true : false)
                     });
                     this.initItems.push(item);
-                    if (item.children && item.expanded) {
-                        this.initData(item.children, level + 1, item);
+                    if (item.children && (!item.expanded && this.expandLevel > level)) {
+                        //this.initData(item.children, level + 1, item); // comment by Suny 2018-09-30 加入默认展开全部功能
+                        this.toggle(index, item); // add by Suny 2018-09-30 加入默认展开全部功能
                     }
                 })
             },
@@ -278,6 +288,9 @@
                                 this.$set(this.initItems[index + childIndex + 1], 'spaceHtml', spaceHtml);
                                 this.$set(this.initItems[index + childIndex + 1], 'isShow', true);
                                 this.$set(this.initItems[index + childIndex + 1], 'expanded', false);
+                                if (child.children && (!child.expanded && this.expandLevel > level)) { // add by Suny 2018-09-30 加入默认展开全部功能
+                                    this.toggle(index + childIndex + 1, child);
+                                }
                             })
                         }
                     }
@@ -287,7 +300,8 @@
                 if (item.children) {
                     item.children.forEach((child, childIndex) => {
                         child.isShow = true;
-                        if (child.children && child.expanded) {
+                        if (child.children && (child.expanded || (child.expanded == undefined && this.expandall))) {
+                            alert("open child");
                             this.open(index + childIndex + 1, child);
                         }
                     })
@@ -305,23 +319,23 @@
                 }
             },
             //点击check勾选框,判断是否有children节点 如果有就一并勾选
-            handleCheckClick(data, event, index){
+            handleCheckClick(data, event, index) {
                 data.isChecked = !data.isChecked;
                 var arr = data.children;
-                if(arr){
-                    if(data.isChecked){
+                if (arr) {
+                    if (data.isChecked) {
                         this.checkGroup.push(data.id);
-                        for (let i=0; i<arr.length; i++){
+                        for (let i = 0; i < arr.length; i++) {
                             this.checkGroup.push(arr[i].id)
                         }
-                    }else {
-                        for (var i=0; i<this.checkGroup.length; i++){
-                            if(this.checkGroup[i] == data.id){
-                                this.checkGroup.splice(i,1)
+                    } else {
+                        for (var i = 0; i < this.checkGroup.length; i++) {
+                            if (this.checkGroup[i] == data.id) {
+                                this.checkGroup.splice(i, 1)
                             }
-                            for (var j=0; j<arr.length; j++){
-                                if(this.checkGroup[i] == arr[j].id){
-                                    this.checkGroup.splice(i,1);
+                            for (var j = 0; j < arr.length; j++) {
+                                if (this.checkGroup[i] == arr[j].id) {
+                                    this.checkGroup.splice(i, 1);
                                 }
                             }
                         }
@@ -466,39 +480,39 @@
         border: 1px solid #EBEBEB;
     }
 
-    .table>tbody>tr>td,
-    .table>tbody>tr>th,
-    .table>thead>tr>td,
-    .table>thead>tr>th {
+    .table > tbody > tr > td,
+    .table > tbody > tr > th,
+    .table > thead > tr > td,
+    .table > thead > tr > th {
         border-top: 1px solid #e7eaec;
         line-height: 1.42857;
         padding: 8px;
         vertical-align: middle;
     }
 
-    .table-bordered>tbody>tr>td,
-    .table-bordered>tbody>tr>th,
-    .table-bordered>tfoot>tr>td,
-    .table-bordered>tfoot>tr>th,
-    .table-bordered>thead>tr>td,
-    .table-bordered>thead>tr>th {
+    .table-bordered > tbody > tr > td,
+    .table-bordered > tbody > tr > th,
+    .table-bordered > tfoot > tr > td,
+    .table-bordered > tfoot > tr > th,
+    .table-bordered > thead > tr > td,
+    .table-bordered > thead > tr > th {
         border: 1px solid #e7e7e7;
     }
 
-    .table>thead>tr>th {
+    .table > thead > tr > th {
         border-bottom: 1px solid #DDD;
     }
 
-    .table-bordered>thead>tr>td,
-    .table-bordered>thead>tr>th {
+    .table-bordered > thead > tr > td,
+    .table-bordered > thead > tr > th {
         background-color: #F5F5F6;
     }
 
-    #hl-tree-table>tbody>tr {
+    #hl-tree-table > tbody > tr {
         background-color: #fbfbfb;
     }
 
-    #hl-tree-table>tbody>.child-tr {
+    #hl-tree-table > tbody > .child-tr {
         background-color: #fff;
     }
 
@@ -521,7 +535,7 @@
         content: ""
     }
 
-    #hl-tree-table th>label {
+    #hl-tree-table th > label {
         margin: 0;
     }
 </style>

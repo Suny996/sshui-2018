@@ -52,6 +52,9 @@
       </iForm>
     </sCustomise>
     <sTreeTable :data="treeData" :columns="treeColumns"></sTreeTable>
+
+    <sTTable :data="treeData" :columns="treeColumns"></sTTable>
+
     <eDialog
       title="element-Dialog 提示"
       :visible.sync="EDialogVisible"
